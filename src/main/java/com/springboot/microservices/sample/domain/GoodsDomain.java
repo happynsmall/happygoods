@@ -28,7 +28,7 @@ public class GoodsDomain {
 	/*
 	 * getUserById: userId에 해당하는 사용자정보 리턴 
 	 */
-	public ResponseEntity <Goods> getUserById(String goodsCd) { 
+	public ResponseEntity <Goods> getGoodsById(String goodsCd) { 
 		Goods re = null;
 		try {
 			log.info("Start db select");

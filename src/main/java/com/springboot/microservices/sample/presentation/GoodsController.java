@@ -33,10 +33,10 @@ public class GoodsController {
   
 	@GetMapping("/happygoods/product/{goodsCd}")
 	@ApiOperation(value="아이디로 사용자 정보 가져오기 ")
-	public ResponseEntity <Goods> getUserById(
+	public ResponseEntity <Goods> getGoodsById(
 				@PathVariable (name="goodsCd", required = true) String goodsCd
 			) { 
-		return goodsService.getUserById(goodsCd);
+		return goodsService.getGoodsById(goodsCd);
 	}
 	
 	   

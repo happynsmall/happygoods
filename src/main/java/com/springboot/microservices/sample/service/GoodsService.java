@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import com.springboot.microservices.sample.domain.TestDomain;
+
 import com.springboot.microservices.sample.domain.GoodsDomain;
 import com.springboot.microservices.sample.model.Goods;
 
@@ -20,8 +20,8 @@ public class GoodsService {
 	private GoodsDomain goodsDomain;
  
  
-	public ResponseEntity <Goods> getUserById(String GoodsCd) { 
-		return goodsDomain.getUserById(GoodsCd);
+	public ResponseEntity <Goods> getGoodsById(String GoodsCd) { 
+		return goodsDomain.getGoodsById(GoodsCd);
 	}
  
 }
