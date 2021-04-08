@@ -6,10 +6,10 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-public class MvpSampleSpringbootApplication {
+public class HappygoodsApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MvpSampleSpringbootApplication.class, args);
+		SpringApplication.run(HappygoodsApplication.class, args);
 	}
 
 }
