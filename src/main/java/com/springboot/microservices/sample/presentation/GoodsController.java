@@ -31,7 +31,7 @@ public class GoodsController {
 	private GoodsService goodsService;
 	
   
-	@GetMapping("/happygoods/product/{goodsCd}")
+	@GetMapping("/product/{goodsCd}")
 	@ApiOperation(value="아이디로 사용자 정보 가져오기 ")
 	public ResponseEntity <Goods> getGoodsById(
 				@PathVariable (name="goodsCd", required = true) String goodsCd
