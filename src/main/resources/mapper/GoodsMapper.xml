@@ -6,7 +6,7 @@
 	<select id="selectGoodsById" parameterType="String" resultType="Goods">
 	    select 
 	    	*
-	    from tb_goods
+	    from md_goods_bas
 	    where GOODS_CD = #{goodsCd}
 	</select>		
 	
