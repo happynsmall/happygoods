@@ -10,7 +10,10 @@
 	    where GOODS_CD = #{goodsCd}
 	</select>		
 	
-	
+	<select id="selectGoodsPriceById" parameterType="String" resultType="NegoGoodsPrice">
+	    select GOODS_CD, CAST((GOODS_PRICE*0.8) as decimal(11,0))  GOODS_PRICE  from md_goods_bas
+	    where GOODS_CD = #{goodsCd}
+	</select>	
 	
  
  

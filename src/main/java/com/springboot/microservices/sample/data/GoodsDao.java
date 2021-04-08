@@ -11,6 +11,7 @@ import org.apache.ibatis.annotations.Mapper;
 
 
 import com.springboot.microservices.sample.model.Goods;
+import com.springboot.microservices.sample.model.NegoGoodsPrice;
 
 @Mapper
 public interface GoodsDao {
@@ -23,6 +24,7 @@ public interface GoodsDao {
 	 */
 	Goods selectGoodsById(String goodsCd) throws Exception;	
 	
+	NegoGoodsPrice selectGoodsPriceById(String goodsCd) throws Exception;	
 	
 
 }

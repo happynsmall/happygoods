@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 
 import com.springboot.microservices.sample.domain.GoodsDomain;
 import com.springboot.microservices.sample.model.Goods;
+import com.springboot.microservices.sample.model.NegoGoodsPrice;
 
 @Service
 public class GoodsService {
@@ -23,5 +24,10 @@ public class GoodsService {
 	public ResponseEntity <Goods> getGoodsById(String GoodsCd) { 
 		return goodsDomain.getGoodsById(GoodsCd);
 	}
+	
+	public ResponseEntity <NegoGoodsPrice> getGoodsPriceById(String GoodsCd) { 
+		return goodsDomain.getGoodsPriceById(GoodsCd);
+	}
+	
  
 }

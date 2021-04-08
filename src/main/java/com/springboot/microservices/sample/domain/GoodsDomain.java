@@ -15,6 +15,7 @@ import org.springframework.stereotype.Service;
 
 import com.springboot.microservices.sample.data.GoodsDao;
 import com.springboot.microservices.sample.model.Goods;
+import com.springboot.microservices.sample.model.NegoGoodsPrice;
 
 @Service
 public class GoodsDomain {
@@ -22,9 +23,7 @@ public class GoodsDomain {
 	
 	@Autowired
 	private GoodsDao sampleGoodsDao;
-	
  
-	
 	/*
 	 * getUserById: userId에 해당하는 사용자정보 리턴 
 	 */
@@ -40,6 +39,16 @@ public class GoodsDomain {
 		return new ResponseEntity<Goods> (re, HttpStatus.OK);
 	}
 	
- 
+	public ResponseEntity <NegoGoodsPrice> getGoodsPriceById(String goodsCd) { 
+		NegoGoodsPrice re = null;
+		try {
+			log.info("Start db select");
+			re = sampleGoodsDao.selectGoodsPriceById(goodsCd);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return new ResponseEntity<NegoGoodsPrice> (re, HttpStatus.OK);
+	}
 	
 }

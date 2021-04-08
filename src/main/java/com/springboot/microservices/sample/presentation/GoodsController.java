@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 import com.springboot.microservices.sample.model.Goods;
+import com.springboot.microservices.sample.model.NegoGoodsPrice;
 import com.springboot.microservices.sample.service.GoodsService;
 
 import io.swagger.annotations.Api;
@@ -39,6 +40,12 @@ public class GoodsController {
 		return goodsService.getGoodsById(goodsCd);
 	}
 	
-	   
+	@GetMapping("/nego/{goodsCd}")
+	@ApiOperation(value="아이디로 사용자 정보 가져오기 ")
+	public ResponseEntity <NegoGoodsPrice> getGoodsPriceById(
+				@PathVariable (name="goodsCd", required = true) String goodsCd
+			) { 
+		return goodsService.getGoodsPriceById(goodsCd);
+	}
  
 }
